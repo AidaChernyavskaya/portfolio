@@ -33,12 +33,16 @@
    align-items: center
   p
     font-size: 2rem
-    text-align: center
+    @include respond(tab-port)
+      text-align: justify
+      width: 80%
 
-.button
+a
   border: none
   outline: none
+  text-decoration: none
   border-radius: 2rem
+  text-align: center
   background: $buttons
   transition: all .3s ease
   padding: 1.5rem 1rem
