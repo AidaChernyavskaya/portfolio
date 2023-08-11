@@ -1,0 +1,58 @@
+@import "../variables"
+@import "../mixins"
+
+.project
+  display: flex
+  align-items: center
+  @include respond(tab-port)
+    flex-direction: column
+    justify-content: center
+  &:not(:last-child)
+    margin-bottom: 5rem
+
+.project__photo
+  margin-right: 4rem
+  @include respond(tab-port)
+    margin-bottom: 5rem
+    margin-right: 0
+  &_background
+    background: $background-gradient
+    border-radius: 2rem
+    padding: 2rem
+  &_img
+    width: 45rem
+    height: 25rem
+    @include respond(small-phone)
+      width: 35rem
+      height: 20rem
+
+.project__information
+  display: flex
+  flex-direction: column
+  @include respond(tab-port)
+   align-items: center
+  p
+    font-size: 2rem
+    text-align: center
+
+.button
+  border: none
+  outline: none
+  border-radius: 2rem
+  background: $buttons
+  transition: all .3s ease
+  padding: 1.5rem 1rem
+  font-size: 1.8rem
+  color: $text-black
+  font-weight: 700
+  cursor: pointer
+  width: 60%
+  margin-top: 3rem
+  @include respond(tab-land)
+    width: 80%
+  &:hover
+    background: $buttons-active
+    transform: translateY(-.3rem)
+    color: white
+  &:active
+    transform: translateY(-.1rem)
