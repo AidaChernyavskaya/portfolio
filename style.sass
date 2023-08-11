@@ -1,0 +1,26 @@
+@import "./styles/variables"
+@import "./styles/typography"
+@import "./styles/mixins"
+
+@import "./styles/page-blocks/main"
+
+*, ::after, ::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 62.5%
+  @include respond(tab-land)
+    font-size: 50%
+  @include respond(phone)
+    font-size: 40%
+
+body
+  font-family: "IBM Plex Mono", sans-serif
+  padding: 5rem 10rem
+  background: $background
+  @include respond(tab-port)
+    padding: 2rem 5rem
+  @include respond(small-phone)
+    padding: 2rem 2rem

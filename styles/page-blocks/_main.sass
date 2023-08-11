@@ -1,0 +1,57 @@
+@import "../variables"
+@import "../mixins"
+
+.about
+  display: flex
+  align-items: center
+  @include respond(tab-port)
+    flex-direction: column-reverse
+  &__text
+    margin-right: 10rem
+    @include respond(tab-port)
+      text-align: center
+      margin-right: 0
+  &__photos
+    position: relative
+    &_photo
+      border-radius: 2rem
+      width: 38rem
+      height: 35rem
+      @include respond(tab-port)
+        width: 32rem
+        height: 29rem
+        margin-bottom: 5rem
+  &__icon
+    width: 10rem
+    height: 10rem
+    position: absolute
+    top: 30rem
+    right: -5rem
+    @include respond(tab-port)
+      width: 8rem
+      height: 8rem
+      top: 25rem
+      right: -4rem
+
+.arrow
+  width: 8rem
+  height: 8rem
+  display: block
+  margin: 8rem auto
+  cursor: pointer
+  animation-duration: 1.5s
+  animation-iteration-count: infinite
+  @include respond(tab-port)
+    margin: 5rem auto
+
+.bounce
+  animation-name: bounce
+  animation-timing-function: ease-out
+
+@keyframes bounce
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-1.5rem)
+  100%
+    transform: translateY(0)
