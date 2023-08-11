@@ -38,7 +38,7 @@ const projects = [
 
 const projectSection = document.getElementById('projects_section');
 
-projects.map((project) => {
+projects.map((project, index) => {
     let projectElem = document.createElement('div');
     projectElem.classList.add('project');
 
@@ -69,6 +69,13 @@ projects.map((project) => {
     projectInf.appendChild(h3);
     projectInf.appendChild(p);
     projectInf.appendChild(a);
+
+    if (index === 0) {
+        let catImg = document.createElement('img');
+        catImg.src = "img/cat.png";
+        catImg.classList.add('cat');
+        projectPhoto.appendChild(catImg);
+    }
 
     projectElem.appendChild(projectPhoto);
     projectElem.appendChild(projectInf);

@@ -10,8 +10,18 @@
   &:not(:last-child)
     margin-bottom: 5rem
 
+.cat
+  position: absolute
+  width: 8rem
+  height: 8rem
+  top: -8rem
+  left: 40rem
+  @include respond(small-phone)
+    left: 30rem
+
 .project__photo
   margin-right: 4rem
+  position: relative
   @include respond(tab-port)
     margin-bottom: 5rem
     margin-right: 0
